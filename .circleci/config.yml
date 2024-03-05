@@ -44,5 +44,7 @@ workflows:
   say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - say-hello
+      - say-hello:
+         requires:
+          - say-hello-2  
       - say-hello-2
